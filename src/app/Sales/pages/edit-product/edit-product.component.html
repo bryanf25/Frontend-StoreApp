@@ -1,1 +1,48 @@
-<p>edit-product works!</p>
+<h1 >
+  Producto
+</h1>
+<div fxLayout="row" fxLayoutGap="40px" fxLayout.xs="column" class="animate__animated animate__fadeInLeftBig">
+  <div fxFlex="50" fxLayout="column" >
+
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
+
+      <mat-form-field fxFlex="100" fxLayout.xs="column">
+        <mat-label>Nombre producto</mat-label>
+        <input matInput type="text" required="true" [(ngModel)]="product.Name">
+      </mat-form-field>
+
+      <mat-form-field fxFlex="100">
+        <mat-label>Valor por unidad</mat-label>
+        <input matInput type="text" required="true" [(ngModel)]="product.UnitValue">
+      </mat-form-field>
+
+    </div>
+    <mat-form-field>
+      <mat-label>Descripción</mat-label>
+      <input matInput type="text" required="true" [(ngModel)]="product.Description">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Foto Url</mat-label>
+      <input matInput type="url" required="true" [(ngModel)]="product.Image">
+    </mat-form-field>
+
+    <mat-divider></mat-divider>
+
+    <div  fxLayout="">
+
+     <button mat-raised-button color="accent" (click)="actualizarProducto()">
+      <mat-icon >save</mat-icon>
+      Actualizar producto
+    </button>
+<span class="spacer"></span>
+      <button mat-raised-button (click)="eliminarProducto()" color="warn"
+      ><mat-icon fontIcon="delete"></mat-icon>
+      Borrar producto</button>
+    </div>
+
+  </div>
+  <div fxFlex="50" fxLayout="column" fxLayoutGap="20px" class="animate__animated animate__fadeInDown">
+    <img [src]="product.Image">
+  </div>
+</div>

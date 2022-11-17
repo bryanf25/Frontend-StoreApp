@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{product.Name | titlecase}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]="product.Image" [alt]="product.Name" >
+  <mat-card-content>
+    <p>{{product.Description}}</p>
+    <h2>{{product.UnitValue | currency}}</h2>
+  </mat-card-content>
+  <mat-card-actions >
+    <button mat-raised-button color="accent" [routerLink]="['/sales/product',product.IdProduct]">
+      <mat-icon >edit</mat-icon>
+      Mantenimiento</button>
+      <br>
+      <label>Cantidad de unidades: </label><input matInput type="number" min="1" >
+    <button mat-raised-button color="accent">
+      <mat-icon >add_shopping_cart</mat-icon>
+      Agregar al carrito</button>
+  </mat-card-actions>
+</mat-card>

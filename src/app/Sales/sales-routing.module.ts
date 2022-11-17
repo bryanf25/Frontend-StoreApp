@@ -17,7 +17,7 @@ const routes: Routes = [
         component: ProductComponent,
       },
       {
-        path: 'product/edit/:id',
+        path: 'product/:id',
         component: EditProductComponent,
       },
       {
@@ -25,7 +25,7 @@ const routes: Routes = [
         component: ListCustomerComponent,
       },
       {
-        path: 'customer/edit/:id',
+        path: 'customer/:id',
         component: EditCustomerComponent,
       },
       {

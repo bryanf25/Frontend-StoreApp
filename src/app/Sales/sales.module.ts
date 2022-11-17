@@ -7,6 +7,9 @@ import { EditCustomerComponent } from './pages/edit-customer/edit-customer.compo
 import { SalesRoutingModule } from './sales-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { MaterialModule } from '../Material/material.module';
+import { ProductCardComponent } from '../components/product-card/product-card.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -16,12 +19,15 @@ import { MaterialModule } from '../Material/material.module';
     ListCustomerComponent,
     EditProductComponent,
     EditCustomerComponent,
-    HomeComponent
+    HomeComponent,
+    ProductCardComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
     SalesRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule
   ]
 })
 export class SalesModule { }

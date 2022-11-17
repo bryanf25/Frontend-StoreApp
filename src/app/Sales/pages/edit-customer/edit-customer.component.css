@@ -1,0 +1,18 @@
+.customer-card {
+  max-width: 400px;
+}
+
+.customer-header-image {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/6073/6073873.png');
+  background-size: cover;
+}
+
+mat-card{
+  width: 25%;
+  margin-top: 5%;
+}
+
+.spacer
+{
+  flex: 1 1 auto;
+}

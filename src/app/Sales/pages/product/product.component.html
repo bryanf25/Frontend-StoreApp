@@ -1,6 +1,23 @@
-<p>product works!</p>
-<ul>
-  <li *ngFor="let product of products">
-    {{product.Name}}
-  </li>
-</ul>
+<h1 >Listado de productos</h1>
+
+<mat-divider></mat-divider>
+<br>
+
+<div fxLayout="row wrap"
+fxLayoutAlign="center"
+fxLayoutGap="20px"
+fxLayout.xs="column"
+class="animate__animated animate__rubberBand"
+>
+
+  <div fxFlex="20"
+  fxLayout.lg="15"
+  fxLayout.sm="30"
+  *ngFor="let product of products">
+
+  <!-- <app-heroe-tarjeta [heroe]="heroe"></app-heroe-tarjeta> -->
+  <app-product-card [product]="product"></app-product-card>
+
+  </div>
+
+</div>

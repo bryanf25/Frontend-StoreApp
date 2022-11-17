@@ -1,8 +1,8 @@
 export interface Product {
-  DetailSale:  any[];
+  DetailSale?:  any[];
   IdProduct:   number;
   Name:        string;
   UnitValue:   number;
-  Description: string;
-  Image:       string;
+  Description?: string;
+  Image?:       string;
 }
