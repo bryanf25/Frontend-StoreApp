@@ -10,6 +10,7 @@ import { MaterialModule } from '../Material/material.module';
 import { ProductCardComponent } from '../components/product-card/product-card.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
+import { PurchaseSummaryComponent } from '../components/purchase-summary/purchase-summary.component';
 
 
 
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     EditProductComponent,
     EditCustomerComponent,
     HomeComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    PurchaseSummaryComponent
   ],
   imports: [
     CommonModule,

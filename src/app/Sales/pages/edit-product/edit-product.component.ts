@@ -31,7 +31,6 @@ export class EditProductComponent implements OnInit {
       .pipe(switchMap(({ id }) => this.productsServices.getProduct(id)))
       .subscribe((dataresponse) => {
         this.product = dataresponse;
-        console.log(dataresponse);
       });
   }
 
@@ -46,7 +45,6 @@ export class EditProductComponent implements OnInit {
   eliminarProducto(){
     this.productsServices.deleteProduct(this.product.IdProduct)
     .subscribe(dataresponse=>{
-      console.log('Se elimino el producto: ',this.product.Name)
       this.mostrarSnackbar(`se ha eliminado el producto: '${this.product.Name}'`)
     })
     this.router.navigate(['/sales/product'])

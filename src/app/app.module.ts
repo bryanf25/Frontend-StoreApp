@@ -6,13 +6,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import { HttpClientModule } from "@angular/common/http";
+import { PurchaseSummaryComponent } from './components/purchase-summary/purchase-summary.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorPageComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -30,7 +30,7 @@ export class EditCustomerComponent implements OnInit {
   }
 
   actualizarCliente(){
-    this.customersService.putCustomer(this.customer.Cedula, this.customer).subscribe(responsedata =>{
+    this.customersService.putCustomer(this.customer.Cedula, this.customer).subscribe((responsedata) =>{
       this.mostrarSnackbar(`se ha actulizado el cliente: '${this.customer.Name} ${this.customer.LastName}'`)
       this.router.navigate(['/sales/customer'])
     })

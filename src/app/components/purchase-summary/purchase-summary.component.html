@@ -1,0 +1,57 @@
+<mat-card>
+  <mat-card-header>
+    <div fxLayout="row" fxLayoutGap="10px" fxLayout.xs="column">
+      <div  fxFlex="30" fxLayout="column" >
+    <h3><mat-icon>shopping_cart</mat-icon> Carrito de compra</h3>
+  </div>
+    <mat-form-field>
+      <mat-label>Cliente</mat-label>
+      <mat-select
+      (valueChange)="customerSelected($event)"
+      >
+        <mat-option *ngFor="let customer of customers" [value]="customer" >
+          {{customer.Name +' '+ customer.LastName | titlecase}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  </mat-card-header>
+<mat-card-content>
+  <ng-container *ngFor="let product of products ; let i = index;">
+
+				<div fxLayout="row" fxLayoutGap="10px" fxLayout.xs="column">
+
+					<div   fxFlex="30" fxLayout="column" >
+						<img mat-card-sm-image [src]="product.Image">
+					</div>
+					<div  fxFlex="50" fxLayout="column" fxLayoutGap="20px" >
+            <br>
+						<span mat-card-title>{{product.Name}}</span>
+						<section  >
+						    <span>Valor unitario: {{ product.UnitValue | currency}}</span>
+							<span>
+                Cantidad compradá: {{datasale[i].Count}}
+              </span>
+                <p>
+                  <strong>Total de compra en articulo: {{ product.UnitValue * datasale[i].Count | currency}}</strong>
+                </p>
+						</section>
+					</div>
+				</div>
+		<mat-divider></mat-divider>
+	</ng-container>
+</mat-card-content>
+<mat-card-footer>
+<mat-card-actions>
+  <button mat-raised-button color="accent" (click)="sell()">
+    <mat-icon >sell</mat-icon>
+    Vender
+  </button>
+<span class="spacer"></span>
+    <button mat-raised-button  color="warn" (click)="cerrar()"
+    ><mat-icon >close</mat-icon>
+    cancelar</button>
+</mat-card-actions>
+<h3>Total factura: {{totalsale | currency}} </h3>
+</mat-card-footer>
+</mat-card>

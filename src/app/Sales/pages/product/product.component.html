@@ -1,5 +1,5 @@
 <h1 >Listado de productos</h1>
-
+<button mat-button color="accent" (click)="showSummary()"><mat-icon>shopping_cart</mat-icon>Ver carrito de compras</button>
 <mat-divider></mat-divider>
 <br>
 
@@ -16,7 +16,7 @@ class="animate__animated animate__rubberBand"
   *ngFor="let product of products">
 
   <!-- <app-heroe-tarjeta [heroe]="heroe"></app-heroe-tarjeta> -->
-  <app-product-card [product]="product"></app-product-card>
+  <app-product-card [product]="product" (productsale)="saleCart($event)"></app-product-card>
 
   </div>
 
