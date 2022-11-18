@@ -35,6 +35,7 @@ export class PurchaseSummaryComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    console.log(this.datasale.length)
     this.datasale = this.data;
     this.data.forEach((product, index) => {
       this.productsService

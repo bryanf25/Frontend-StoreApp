@@ -37,10 +37,11 @@ export class ProductCardComponent implements OnInit {
     };
   }
 
-  addProduct(id: number, name: string) {
-    this.createProductoToSell(id)
+  addProduct() {
+    this.createProductoToSell(this.product.IdProduct)
     this.productsale.emit(this.detailSale);
-    this.snackBar.open(`acabas de agregar al carrito: '${this.countunits} ${name}'`, 'Cerrar',{duration: 3000})
+    this.snackBar.open(`acabas de agregar al carrito: '${this.countunits} ${this.product.Name}'`, 'Cerrar',{duration: 3000})
+    this.countunits = 0;
   }
 
 

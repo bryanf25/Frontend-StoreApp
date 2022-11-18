@@ -14,12 +14,15 @@ export class SalesService {
 
 
   postDetailSale(detailSale: DetailSale){
-    console.log(`${this.Baseurl}/DetailSale`)
     return this.httpcliente.post(`${this.Baseurl}/DetailSale`,detailSale)
   }
 
   postSale(sale : Sale){
-    console.log(`${this.Baseurl}/Sale`)
     return this.httpcliente.post(`${this.Baseurl}/Sale`,sale)
+  }
+
+  getSales():Observable<Sale[]>
+  {
+    return this.httpcliente.get<Sale[]>(`${this.Baseurl}/Sale`)
   }
 }

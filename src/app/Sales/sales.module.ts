@@ -11,6 +11,7 @@ import { ProductCardComponent } from '../components/product-card/product-card.co
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { PurchaseSummaryComponent } from '../components/purchase-summary/purchase-summary.component';
+import { ListSalesComponent } from './pages/list-sales/list-sales.component';
 
 
 
@@ -22,7 +23,8 @@ import { PurchaseSummaryComponent } from '../components/purchase-summary/purchas
     EditCustomerComponent,
     HomeComponent,
     ProductCardComponent,
-    PurchaseSummaryComponent
+    PurchaseSummaryComponent,
+    ListSalesComponent
   ],
   imports: [
     CommonModule,

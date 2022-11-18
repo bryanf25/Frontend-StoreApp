@@ -58,4 +58,8 @@ export class ProductComponent implements OnInit {
     })
   }
 
+  cleanCart(){
+    this.invoice.splice(0,this.invoice.length)
+  }
+
 }

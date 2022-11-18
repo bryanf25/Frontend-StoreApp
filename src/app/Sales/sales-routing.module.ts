@@ -6,6 +6,7 @@ import { ListCustomerComponent } from './pages/list-customer/list-customer.compo
 import { EditProductComponent } from './pages/edit-product/edit-product.component';
 import { EditCustomerComponent } from './pages/edit-customer/edit-customer.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ListSalesComponent } from './pages/list-sales/list-sales.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
       {
         path: 'customer/:id',
         component: EditCustomerComponent,
+      },
+      {
+        path: 'list',
+        component: ListSalesComponent,
       },
       {
         path: '**',

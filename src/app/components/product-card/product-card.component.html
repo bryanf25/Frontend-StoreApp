@@ -15,10 +15,11 @@
     <h2>{{product.UnitValue | currency}}</h2>
   </mat-card-content>
   <mat-card-actions >
-
-      <br>
-      <label>Cantidad de unidades: </label><input matInput type="number" min="1" [(ngModel)]="countunits" >
-    <button mat-raised-button color="accent" (click)="addProduct(product.IdProduct,product.Name)">
+      <mat-form-field>
+        <mat-label>Cantidad de unidades: </mat-label>
+        <input matInput #idcount type="number" min="1" [(ngModel)]="countunits" >
+      </mat-form-field>
+    <button mat-raised-button color="accent" (click)="addProduct()">
       <mat-icon >add_shopping_cart</mat-icon></button>
   </mat-card-actions>
 </mat-card>
